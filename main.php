@@ -1,12 +1,11 @@
-<?php
-include "conn.php";
-$sql_slite = "SELECT * FROM slite_show WHERE slite_status=1";
-$result_slite = $conn->query($sql_slite);
-?>
 <div class="container py-1">
 <div id="carouselExampleIndicators" class="carousel slide">
   <div class="carousel-indicators">
     <?php
+      include "conn.php";
+      $sql_slite = "SELECT * FROM slite_show WHERE slite_status=1";
+      $result_slite = $conn->query($sql_slite);
+
       $i=0;
       foreach($result_slite as $row_slite){
         $actives="";
